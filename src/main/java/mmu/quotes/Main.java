@@ -10,7 +10,13 @@ import java.nio.file.Paths;
 public class Main {
     public static final void main(String args[]) {
         try {
-            QuoteReader reader = new YamlQuoteReader("src/main/resources/quotes.yaml");
+            QuoteReader reader = null;
+            if (args.length > 0 && args[0].equals("json")) {
+                throw new UnsupportedOperationException("TODO: implement JSON reader");
+            }
+            else {
+                reader = new YamlQuoteReader("src/main/resources/quotes.yaml");
+            }
             Component initialComponent = QuotesComponent.createFromQuoteMaps(reader.readQuotes());
             renderToFile(initialComponent);
         }
