@@ -12,7 +12,7 @@ public class Main {
         try {
             QuoteReader reader = null;
             if (args.length > 0 && args[0].equals("json")) {
-                throw new UnsupportedOperationException("TODO: implement JSON reader");
+                reader = new JsonQuoteReader("src/main/resources/quotes.json");
             }
             else {
                 reader = new YamlQuoteReader("src/main/resources/quotes.yaml");
