@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 public class Main {
     public static final void main(String args[]) {
         try {
-            YamlQuoteReader reader = new YamlQuoteReader("src/main/resources/quotes.yaml");
+            QuoteReader reader = new YamlQuoteReader("src/main/resources/quotes.yaml");
             Component initialComponent = QuotesComponent.createFromQuoteMaps(reader.readQuotes());
             renderToFile(initialComponent);
         }
