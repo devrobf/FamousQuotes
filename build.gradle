@@ -10,4 +10,5 @@ repositories {
 dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'org.yaml:snakeyaml:2.2'
+    implementation 'com.google.code.gson:gson:2.10.1'
 }
