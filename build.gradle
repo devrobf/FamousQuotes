@@ -1,1 +1,13 @@
-// TODO: Complete this in Exercise 1.2
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'mmu.quotes.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    implementation 'org.yaml:snakeyaml:2.2'
+}
